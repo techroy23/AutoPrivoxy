@@ -9,6 +9,7 @@ echo ""
 echo ""
 echo "PLease wait while we setup your IP"
 PUBLIC_IPV4=$(curl ifconfig.co)
+
 clear
 echo ""
 echo ""
