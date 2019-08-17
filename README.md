@@ -1,5 +1,9 @@
 # AutoPrivoxy
-Automatic Installer for Privoxy
+
+Automatic Installer for Privoxy.
+
+This script will install privoxy and set it to accept connections only to your IP.
+If you want to allow access to everyone please comment out the last line in /etc/privoxy/config
 
 ## Usage
 `````
