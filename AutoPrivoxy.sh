@@ -31,7 +31,7 @@ clear
 echo ""
 echo ""
 echo ""
-apt-get install privoxy -y
+apt-get install privoxy net-tools -y
 
 clear
 echo ""
