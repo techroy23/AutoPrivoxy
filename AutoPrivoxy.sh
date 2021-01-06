@@ -22,10 +22,33 @@ echo "Privoxy will run on PORT : $PORT"
 read -rp "Press any key to continue ..."
 
 clear
-echo ""
-echo ""
-echo ""
-apt-get update -y && apt-get upgrade -y && apt autoclean -y && apt autoremove
+echo " "
+echo " "
+echo " "
+echo RUNNING "sudo apt update -y"
+sudo apt update -y
+
+echo " "
+echo " "
+echo " "
+echo RUNNING "sudo apt upgrade -y"
+sudo apt upgrade -y
+
+echo " "
+echo " "
+echo " "
+echo RUNNING "sudo apt autoclean -y"
+sudo apt autoclean -y
+
+echo " "
+echo " "
+echo " "
+echo RUNNING "sudo apt autoremove -y"
+sudo apt autoremove -y
+
+echo " "
+echo " "
+echo " "
 
 clear
 echo ""
