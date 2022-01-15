@@ -7,10 +7,9 @@
 echo ""
 echo ""
 echo ""
-echo "PLease wait while we setup your IP"
+echo "PLease wait ..."
 PUBLIC_IPV4=$(curl ifconfig.co)
 
-clear
 echo ""
 echo ""
 echo ""
@@ -21,42 +20,18 @@ fi
 echo "Privoxy will run on PORT : $PORT"
 read -rp "Press any key to continue ..."
 
-clear
-echo " "
-echo " "
-echo " "
-echo RUNNING "sudo apt update -y"
-sudo apt update -y
-
-echo " "
-echo " "
-echo " "
-echo RUNNING "sudo apt upgrade -y"
-sudo apt upgrade -y
-
-echo " "
-echo " "
-echo " "
-echo RUNNING "sudo apt autoclean -y"
-sudo apt autoclean -y
-
-echo " "
-echo " "
-echo " "
-echo RUNNING "sudo apt autoremove -y"
-sudo apt autoremove -y
-
-echo " "
-echo " "
-echo " "
-
-clear
 echo ""
 echo ""
 echo ""
+echo RUNNING "sudo apt update -y && apt upgrade -y && apt autoclean -y && apt autoremove -y"
+sudo apt update -y && apt upgrade -y && apt autoclean -y && apt autoremove -y
+
+echo ""
+echo ""
+echo ""
+echo RUNNING "sudo apt-get install privoxy net-tools -y"
 apt-get install privoxy net-tools -y
 
-clear
 echo ""
 echo ""
 echo ""
@@ -94,7 +69,7 @@ sed -i "s|MYIP|$PUBLIC_IPV4|" '/etc/privoxy/config'
 sed -i "s|PORT|$PORT|" '/etc/privoxy/config'
 
 service privoxy restart
-clear
+
 echo ""
 echo ""
 echo ""
