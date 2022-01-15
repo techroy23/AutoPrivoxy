@@ -10,9 +10,6 @@ echo ""
 echo "PLease wait ..."
 PUBLIC_IPV4=$(curl ifconfig.co)
 
-echo ""
-echo ""
-echo ""
 read -rp "Please enter the port you want Privoxy to use between ( 1000 - 65560 ) : " -e -i "" PORT
 if [[ $PORT == "" ]]; then
 PORT=8118
@@ -20,27 +17,14 @@ fi
 echo "Privoxy will run on PORT : $PORT"
 read -rp "Press any key to continue ..."
 
-echo ""
-echo ""
-echo ""
 echo RUNNING "sudo apt update -y && apt upgrade -y && apt autoclean -y && apt autoremove -y"
 sudo apt update -y && apt upgrade -y && apt autoclean -y && apt autoremove -y
 
-echo ""
-echo ""
-echo ""
 echo RUNNING "sudo apt-get install privoxy net-tools -y"
 apt-get install privoxy net-tools -y
 
-echo ""
-echo ""
-echo ""
 rm /etc/privoxy/config
 
-clear
-echo ""
-echo ""
-echo ""
 cat << ENDOFFILE >> /etc/privoxy/config
 user-manual /usr/share/doc/privoxy/user-manual
 confdir /etc/privoxy
